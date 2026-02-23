@@ -204,9 +204,10 @@ p {
 }
 
 .aboutme {
-  background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg")
-    no-repeat;
-  background-size: cover;
+  /* background: url("/")
+    no-repeat; */
+  /* background-size: cover; */
+  background-color: #1f3d2b;
 }
 
 .aboutme p {

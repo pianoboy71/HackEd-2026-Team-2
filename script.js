@@ -79,8 +79,8 @@ $(document).ready(function () {
     scrollBar: true,
     responsiveWidth: 400,
     navigation: true,
-    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
-    anchors: ["aboutme", "skills", "projects", "contact", "footer"],
+    navigationTooltips: ["home", "about", "demovid", "contact"],
+    anchors: ["home", "about", "demovid", "contact"],
     menu: "#myMenu",
     fitToSection: false,
 
@@ -122,47 +122,46 @@ $(document).ready(function () {
   });
 
   // move section down one
-  $(document).on("click", "#moveDown", function () {
-    $.fn.fullpage.moveSectionDown();
-  });
+ // fullpage.js navigation for header buttons
+$('#aboutBtn').click(function(e){
+    e.preventDefault();
+    $.fn.fullpage.moveTo('about');
+});
 
-  // fullpage.js link navigation
-  $(document).on("click", "#skills", function () {
-    $.fn.fullpage.moveTo(2);
-  });
+$('#demoBtn').click(function(e){
+    e.preventDefault();
+    $.fn.fullpage.moveTo('demovid');
+});
 
-  $(document).on("click", "#projects", function () {
-    $.fn.fullpage.moveTo(3);
-  });
-
-  $(document).on("click", "#contact", function () {
-    $.fn.fullpage.moveTo(4);
-  });
+$('#contactBtn').click(function(e){
+    e.preventDefault();
+    $.fn.fullpage.moveTo('contact');
+});
 
   // smooth scrolling
-  $(function () {
-    $("a[href*=#]:not([href=#])").click(function () {
-      if (
-        location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
-        location.hostname == this.hostname
-      ) {
-        var target = $(this.hash);
-        target = target.length
-          ? target
-          : $("[name=" + this.hash.slice(1) + "]");
-        if (target.length) {
-          $("html,body").animate(
-            {
-              scrollTop: target.offset().top
-            },
-            700
-          );
-          return false;
-        }
-      }
-    });
-  });
+//   $(function () {
+//     $("a[href*=#]:not([href=#])").click(function () {
+//       if (
+//         location.pathname.replace(/^\//, "") ==
+//           this.pathname.replace(/^\//, "") &&
+//         location.hostname == this.hostname
+//       ) {
+//         var target = $(this.hash);
+//         target = target.length
+//           ? target
+//           : $("[name=" + this.hash.slice(1) + "]");
+//         if (target.length) {
+//           $("html,body").animate(
+//             {
+//               scrollTop: target.offset().top
+//             },
+//             700
+//           );
+//           return false;
+//         }
+//       }
+//     });
+//   });
 
   //ajax form
   $(function () {

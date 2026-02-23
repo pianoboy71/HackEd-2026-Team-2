@@ -32,9 +32,9 @@
         <i class="fa fa-bars fa-3x"></i>
         <div class="header-links">
             <ul>
-                <li data-menuanchor="fourthPage"><a href="#contact">LINK</a></li>
-                <li data-menuanchor="thirdPage"><a href="#demovid">LINK</a></li>
-                <li data-menuanchor="secondPage"><a href="#about">LINK</a></li>
+                <li><a id="aboutBtn" href="#about">ABOUT</a></li>
+                <li><a id="demoBtn" href="#demovid">DEMO VIDEO</a></li>
+                <li><a id="contactBtn" href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </div>
@@ -46,9 +46,9 @@
         <div class="nav-container">
             <div class="nav-links">
                 <ul id='myMenu'>
-                    <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
-                    <li data-menuanchor="thirdPage"><a href="#portfolio">PORTFOLIO</a></li>
-                    <li data-menuanchor="fourthPage"><a href="#contact">CONTACT</a></li>
+                    <li data-menuanchor="about"><a href="#about">ABOUT</a></li>
+                    <li data-menuanchor="demovid"><a href="#demovid">DEMO VIDEO</a></li>
+                    <li data-menuanchor="contact"><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -61,9 +61,9 @@
 
         <!-- begin section -->
 
-        <div class="section aboutme" data-anchor="aboutme">
+        <div class="section aboutme" data-anchor="home">
             <div class="opaque-bg animated fadeInDown">
-                <h1 style="color:white">NORWICH<span style="color:#FF6363">/</span>SORTED</h1>
+                <h1 style="color:white">NORWICH<span style="color: #a8d5ba;">/</span>SORTED</h1>
                 <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
             </div>
             <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
@@ -72,89 +72,78 @@
 
         <!-- begin section -->
 
-        <div class="section" data-anchor="skills">
+        <div class="section" data-anchor="about">
             <div class="content">
+                <br></br>
                 <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT</h1>
-                <p class="wow fadeInDown" data-wow-delay="0.2s">info text</p>
+                <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries, but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                    containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                    PageMaker including versions of Lorem Ipsum.</p>
 
-        </div>
-        <!-- end section -->
+            </div>
+            <!-- end section -->
 
-        <!-- begin section -->
+            <!-- begin section -->
 
-        <div class="section" data-anchor="projects">
-           <h1 class="wow fadeInDown" data-wow-delay="0.2s">DEMO VIDEO</h1>
+            <div class="section" data-anchor="demovid">
+                <h1 class="wow fadeInDown" data-wow-delay="0.2s">DEMO VIDEO</h1>
                 <p class="wow fadeInDown" data-wow-delay="0.2s">video here</p>
-        </div>
-        <!-- end section -->
+                <img id="vidimg"
+                    src="https://www.nfi.edu/wp-content/uploads/2021/06/alexander-shatov-niUkImZcSP8-unsplash-1024x768.jpg">
+            </div>
+            <!-- end section -->
 
-        <!-- begin section -->
+            <!-- begin section -->
 
-        <div class="section" data-anchor="contact">
-            <div class="content wow fadeInDown" data-wow-delay="0.2s">
-                <h1>CONTACT ME</h1>
-                <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from you!
-                </p>
-                <br>
-                <div class="contact-form">
-
-                    <div id="form-messages"></div>
-                    <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
-                        <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="NAME"
-                                data-error="Field can't be blank!" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL"
-                                data-error="Field can't be blank!" required>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
-                            <textarea data-minlength="10" class="form-control" id="message" name="message"
-                                placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
-                            <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="hidden">
-                            <input type="text" class="form-control" id="human" name="human" placeholder="">
-                        </div>
-                        <div class="wow fadeInUp" data-wow-delay="1s">
-                            <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
-                        </div>
-                    </form>
+            <div class="section" data-anchor="contact">
+                <div class="content wow fadeInDown" data-wow-delay="0.2s">
+                    <h1>CONTACT ME</h1>
+                    <p>Whether you're interested in working with me or just want to say hello, I'd love to hear from
+                        you!
+                    </p>
                     <br>
+                    <div class="contact-form">
+
+                        <div id="form-messages"></div>
+                        <form id="ajax-contact" method="post" role="form" action="contact.php" data-toggle="validator">
+                            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="NAME"
+                                    data-error="Field can't be blank!" required>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL"
+                                    data-error="Field can't be blank!" required>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+                                <textarea data-minlength="10" class="form-control" id="message" name="message"
+                                    placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+                                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="hidden">
+                                <input type="text" class="form-control" id="human" name="human" placeholder="">
+                            </div>
+                            <div class="wow fadeInUp" data-wow-delay="1s">
+                                <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+                            </div>
+                        </form>
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- end section -->
+            <!-- end section -->
 
-        <!-- begin section -->
-
-        <div class="section fp-auto-height">
-            <div class="footer">
-                <p>CONNECT WITH ME</p>
-                <div class="social-links">
-                    <span><a href="https://www.linkedin.com/in/bradleyengelhardt" target="_blank"><i
-                                class="fa fa-linkedin fa-2x"></i></a></span>
-                    <span><a target="_blank" href="https://twitter.com/bradengelhardt" target="_blank"><i
-                                class="fa fa-twitter fa-2x"></i></a></span>
-                    <span><a href="https://github.com/SquishyAndroid" target="_blank"><i
-                                class="fa fa-github fa-2x"></i></a></span>
-                    <span><a href="https://codepen.io/SquishyAndroid/pens/public/"><i
-                                class="fa fa-codepen fa-2x"></i></a></span>
-                </div>
-            </div>
-        </div>
-        <!-- end section -->
-
-    </div>
-    <!-- end fullpage -->
 </body>
 
 </html>
