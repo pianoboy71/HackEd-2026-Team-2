@@ -45,13 +45,15 @@ let model, webcam, labelContainer, maxPredictions;
         if (isRunning) {
             // Pause webcam
             webcam.pause();
-            btn.textContent = "Reset";
             isRunning = false;
+            predictPaused();
+            btn.textContent = "Reset";
         } else {
             // Resume webcam
             webcam.play();
-            btn.textContent = "Scan";
             isRunning = true;
+            labelContainer.innerHTML = "";
+            btn.textContent = "Scan";
         }
     }
 
