@@ -1,7 +1,11 @@
 /* general styles */
 
 body {
-  font-family: "Raleway", sans-serif !important;
+  /* font-family: "Raleway", sans-serif !important; */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   background-color: #a8d5ba;
 }
 
@@ -23,20 +27,34 @@ p {
   color: #1f3d2b;
 }
 
-#aboutsection{
+#aboutsection {
   /* background-color: #5b7e65; */
-  background-image: url('./images/bottles.png');
+  background-image: url("./images/bottles.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
+  font-size: 1rem;
 }
 #aboutsection::before {
   content: "";
   position: absolute;
-  inset: 0; 
-  background: rgba(132, 167, 115, 0.85); 
+  inset: 0;
+  background: rgba(132, 167, 115, 0.85);
   z-index: 1;
+}
+
+.about-section-text-wrapper {
+  margin-left: 1rem;
+}
+
+.about-text {
+  background-color: #cdf2dc56;
+  padding: 2rem;
+  border-radius: 10px;
+  border-color: #468847;
+  border-style: solid;
+  text-align: left;
 }
 
 /* Make content above overlay */
@@ -62,46 +80,43 @@ p {
 }
 
 .section.aboutme {
-    position: relative;
-    background-image: 
-        url('./images/norwich.png'),   
-        url('./images/rubbish.png');  
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-blend-mode: overlay; 
+  position: relative;
+  background-image: url("./images/norwich.png"), url("./images/rubbish.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
 
 /* Overlay */
 .section.aboutme::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(31, 61, 43, 0.75); /* your green tone */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 61, 43, 0.75); /* your green tone */
+  z-index: 1;
 }
 
 /* Keep content above overlay */
 .section.aboutme > * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 /* Color overlay */
 #fullpage::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #1f3d2b;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #1f3d2b;
+  z-index: 1;
 }
 
 /* Make sure content sits above overlay */
 #fullpage > * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-
 
 /* flash alert styles */
 
@@ -142,10 +157,10 @@ p {
 /* nav header links */
 
 .nav-header {
-    background-color: #1f3d2b; 
-    width: 100%;              
-    z-index: 600;             
-    /* padding: 10px 0;            */
+  background-color: #1f3d2b;
+  width: 100%;
+  z-index: 600;
+  /* padding: 10px 0;            */
 }
 .nav-brand {
   position: fixed;
@@ -198,7 +213,6 @@ p {
   -webkit-transition: all 0.2s ease-in;
 }
 
-
 .header-links a:hover {
   color: #c65d1e;
 }
@@ -231,8 +245,6 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 
 .nav-links a:hover {
   color: #ff6363;
