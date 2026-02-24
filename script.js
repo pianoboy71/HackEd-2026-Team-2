@@ -122,21 +122,26 @@ $(document).ready(function () {
   });
 
   // move section down one
- // fullpage.js navigation for header buttons
-$('#aboutBtn').click(function(e){
-    e.preventDefault();
-    $.fn.fullpage.moveTo('about');
-});
+  // fullpage.js navigation for header buttons
+  $('#homeBtn').click(function(e){
+      e.preventDefault();
+      $.fn.fullpage.moveTo(1);
+  });
 
-$('#demoBtn').click(function(e){
-    e.preventDefault();
-    $.fn.fullpage.moveTo('demovid');
-});
+  $('#aboutBtn').click(function(e){
+      e.preventDefault();
+      $.fn.fullpage.moveTo(2);
+  });
 
-$('#contactBtn').click(function(e){
-    e.preventDefault();
-    $.fn.fullpage.moveTo('contact');
-});
+  $('#demoBtn').click(function(e){
+      e.preventDefault();
+      $.fn.fullpage.moveTo(3);
+  });
+
+  $('#contactBtn').click(function(e){
+      e.preventDefault();
+      $.fn.fullpage.moveTo(4);
+  });
 
   // smooth scrolling
 //   $(function () {
