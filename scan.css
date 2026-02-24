@@ -13,8 +13,10 @@ body {
   background-color: #1f3d2b;
   padding: 10px 18px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: background-color .3s ease, transform .2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   z-index: 999;
 }
 
@@ -36,17 +38,23 @@ body {
   padding: 2.5rem;
   background: #ffffff;
   border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  animation: fadeInUp .7s ease both;
+  animation: fadeInUp 0.7s ease both;
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -63,7 +71,7 @@ h1 {
   border: 3px solid #a8d5ba;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #scan-btn {
@@ -75,8 +83,10 @@ h1 {
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform .2s ease, background-color .3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 #scan-btn:hover {
@@ -93,11 +103,11 @@ h1 {
   padding: 1.8rem;
   border-radius: 12px;
   font-size: 1.4rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  animation: fadeInUp .6s ease both;
+  animation: fadeInUp 0.6s ease both;
 }
 
 #label-container .detected-label {
@@ -139,4 +149,15 @@ h1 {
   #label-container {
     max-width: 90%;
   }
+}
+.nav-brand {
+  position: fixed;
+  left: 0;
+  z-index: 600;
+  padding: 10px;
+  width: 6%;
+  pointer-events: auto;
+}
+.nav-brand img {
+  width: 100%;
 }
