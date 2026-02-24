@@ -1,22 +1,33 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="scan-page-container">
-      <button id="capture-image">Capture image</button>
-      <input
-        id="upload-file-button"
-        type="file"
-        id="fileInput"
-        accept="image/*"
-        capture="environment"
-      />
-      <button id="search-button">Search</button>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <!-- TensorFlow + Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script type="text/javascript"></script>
+  <script src="scanscript.js"></script>
+  <link rel="scanstylesheet" href="scan.css">
+
+
+</head>
+
+<body>
+  <!-- <div class="scan-page-container">
+    <button>Scan</button>
+    <input type="file" id="fileInput" accept="image/*" capture="environment" />
+    <button>Search</button>
+  </div> -->
+
+  <h1>Image Scanner</h1>
+
+  <button type="button" onclick="init()">Start</button>
+  <div id="webcam-container"></div>
+  <div id="label-container"></div>
+</body>
+
 </html>
