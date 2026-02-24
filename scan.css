@@ -30,3 +30,10 @@
       font-size: 16px;
       cursor: pointer;
     }
+
+    .scan-page-home-button {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 10px;
+    }
