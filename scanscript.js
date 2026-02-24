@@ -37,8 +37,22 @@ let model, webcam, labelContainer, maxPredictions;
         window.requestAnimationFrame(loop);
     }
 
-    function pause() {
-        webcam.pause()
+    let isRunning = true; // webcam starts running
+
+    function toggleScan() {
+        const btn = document.getElementById("scan-btn");
+
+        if (isRunning) {
+            // Pause webcam
+            webcam.pause();
+            btn.textContent = "Reset";
+            isRunning = false;
+        } else {
+            // Resume webcam
+            webcam.play();
+            btn.textContent = "Scan";
+            isRunning = true;
+        }
     }
 
 
@@ -56,3 +70,7 @@ let model, webcam, labelContainer, maxPredictions;
 
         labelContainer.innerHTML = best.className;
     }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        init();
+    });
