@@ -1,0 +1,14 @@
+{
+  "Metal": {
+    "recyclable": true,
+    "dispose": "Rinse and place in curbside recycling bin; remove non-metal parts (e.g., lids with plastic)."
+  },
+  "Plastic": {
+    "recyclable": false,
+    "dispose": "Check the plastic number and local rules; rinse and place in recycling if accepted; otherwise dispose in trash."
+  },
+  "Paper": {
+    "recyclable": true,
+    "dispose": "Remove food contamination; flatten and place in curbside paper recycling or paper bin."
+  }
+}
