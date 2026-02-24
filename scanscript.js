@@ -30,7 +30,7 @@ let model, webcam, labelContainer, maxPredictions;
     }
 
     async function loop() {
-        webcam.update(); // update the webcam frame
+        webcam.update({ facingMode: "environment" }); // update the webcam frame
         await predict();
         window.requestAnimationFrame(loop);
     }
