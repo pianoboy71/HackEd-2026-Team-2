@@ -1,34 +1,33 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <!-- TensorFlow + Teachable Machine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="scanscript.js"></script>
+    <link rel="stylesheet" href="scan.css" />
+  </head>
 
-  <!-- TensorFlow + Teachable Machine -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script type="text/javascript"></script>
-  <script src="scanscript.js"></script>
-  <link rel="stylesheet" href="scan.css">
-
-
-</head>
-
-<body>
-  <!-- <div class="scan-page-container">
+  <body>
+    <!-- <div class="scan-page-container">
     <button>Scan</button>
     <input type="file" id="fileInput" accept="image/*" capture="environment" />
     <button>Search</button>
   </div> -->
-  <button class="scan-page-home-button" type="button"><a href="index.html">Home</a></button>
+    <button class="scan-page-home-button" type="button">
+      <a href="index.html">Home</a>
+    </button>
 
-  <h1>Image Scanner</h1>
-
-  <button id="scan-btn" type="button" onclick="toggleScan()">Scan</button>
-  <div id="webcam-container"></div>
-  <div id="label-container"></div>
-</body>
-
+    <h1>Image Scanner</h1>
+    <div class="scan-page-container">
+      <button id="scan-btn" type="button" onclick="toggleScan()">Scan</button>
+      <div id="webcam-container"></div>
+      <div id="label-container"></div>
+    </div>
+  </body>
 </html>

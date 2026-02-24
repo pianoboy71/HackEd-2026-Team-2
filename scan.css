@@ -65,3 +65,13 @@ button {
 .image-pause-button:hover {
   background-color: #e53935;
 }
+
+#label-container {
+  font-size: 3rem;
+  font-weight: bold;
+  width: 50%;
+  background-color: #f44336;
+  color: white;
+  padding: 2rem;
+  border-radius: 5px;
+}
