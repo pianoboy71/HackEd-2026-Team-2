@@ -1,117 +1,142 @@
-.scan-page-container {
-  background-color: #efebeb;
-  border-radius: 10px;
-  padding: 0.9rem;
-  width: 80%;
-  gap: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 body {
-  font-family: Arial, sans-serif;
+  background-color: #a8d5ba;
+  font-family: "Raleway", sans-serif;
   text-align: center;
-  margin-top: 40px;
-}
-
-#webcam-container {
-  margin-top: 20px;
-}
-
-#label-container div {
-  margin: 5px;
-  font-weight: bold;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  margin: 0;
+  padding: 0;
 }
 
 .scan-page-home-button {
   position: fixed;
-  top: 0;
-  left: 0;
-  margin: 10px;
+  top: 15px;
+  left: 15px;
+  background-color: #1f3d2b;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background-color .3s ease, transform .2s ease;
+  z-index: 999;
+}
+
+.scan-page-home-button a {
+  color: #a8d5ba;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.scan-page-home-button:hover {
+  background-color: #c65d1e;
+  transform: scale(1.05);
 }
 
 .scan-page-container {
-  height: 80vh;
-  width: 80%;
-  background-color: #a8d5ba;
-  margin: auto;
-  margin-top: 5vh;
-  border-radius: 10px;
-  padding: 0.9rem;
-}
-.image-scan-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-.image-pause-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-.image-scan-button:hover {
-  background-color: #45a049;
-}
-.image-pause-button:hover {
-  background-color: #e53935;
-}
-
-#label-container {
-  font-size: 3rem;
-  font-weight: bold;
-  width: 50%;
-  background-color: #a8d5ba;
-  color: white;
-  padding: 2rem;
-  border-radius: 5px;
-}
-
-/* Additional styling for detailed detection info */
-#label-container {
-  text-align: center;
+  width: 85%;
+  max-width: 900px;
+  margin: 12vh auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 2rem;
+  animation: fadeInUp .7s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  color: #1f3d2b;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#webcam-container {
+  width: 100%;
+  max-width: 500px;
+  background: #f5f7f4;
+  border: 3px solid #a8d5ba;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#scan-btn {
+  background-color: #a8d5ba;
+  color: #1f3d2b;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .2s ease, background-color .3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+#scan-btn:hover {
+  background-color: #c65d1e;
+  color: white;
+  transform: scale(1.05);
+}
+
+#label-container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #1f3d2b;
+  color: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  animation: fadeInUp .6s ease both;
 }
 
 #label-container .detected-label {
-  font-size: 2.2rem;
-  margin-bottom: 0.3rem;
-}
-
-#label-container .item-text {
-  font-size: 1.15rem;
-  margin-top: 0.3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a8d5ba;
 }
 
 #label-container .recyclable {
-  font-size: 1.61rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 0.2rem;
 }
 
 #label-container .recyclable.yes {
-  color: #0a8a2f;
+  color: #9af2a4;
 }
 
 #label-container .recyclable.no {
-  color: #2a2a2a;
+  color: #ffdddd;
 }
 
 #label-container .dispose {
-  font-size: 1.15rem;
-  margin-top: 0.6rem;
-  max-width: 100%;
-  color: #1f3d2b;
+  font-size: 1.1rem;
+  color: #e3e3e3;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .scan-page-container {
+    width: 92%;
+    padding: 1.8rem;
+  }
+
+  #scan-btn {
+    width: 90%;
+  }
+
+  #webcam-container,
+  #label-container {
+    max-width: 90%;
+  }
 }
