@@ -33,7 +33,11 @@ let model, webcam, labelContainer, maxPredictions;
 
     async function loop() {
         webcam.update(); // update the webcam frame
-        await predict();
+
+        if (isRunning) {
+            await model.predict(webcam.canvas);
+        }
+
         window.requestAnimationFrame(loop);
     }
 
@@ -46,7 +50,7 @@ let model, webcam, labelContainer, maxPredictions;
             // Pause webcam
             webcam.pause();
             isRunning = false;
-            predictPaused();
+            predict();
             btn.textContent = "Reset";
         } else {
             // Resume webcam
