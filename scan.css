@@ -10,30 +10,58 @@
   justify-content: center;
 }
 
- body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 40px;
-    }
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
 
-    #webcam-container {
-      margin-top: 20px;
-    }
+#webcam-container {
+  margin-top: 20px;
+}
 
-    #label-container div {
-      margin: 5px;
-      font-weight: bold;
-    }
+#label-container div {
+  margin: 5px;
+  font-weight: bold;
+}
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    .scan-page-home-button {
-	position: fixed;
-	top: 0;
-	left: 0;
-	margin: 10px;
-    }
+.scan-page-home-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+
+.scan-page-container {
+  height: 80vh;
+  width: 80%;
+  background-color: #a8d5ba;
+  margin: auto;
+  margin-top: 5vh;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+.image-scan-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.image-pause-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.image-scan-button:hover {
+  background-color: #45a049;
+}
+.image-pause-button:hover {
+  background-color: #e53935;
+}
