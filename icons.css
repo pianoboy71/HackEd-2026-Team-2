@@ -23,7 +23,9 @@ h1 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   border-top: 4px solid #a8d5ba;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .icon-card:hover {
   transform: translateY(-4px);
@@ -52,4 +54,37 @@ h1 {
   color: #484848;
   font-size: 14px;
   line-height: 1.5;
+}
+.home-button {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #1f3d2b;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  z-index: 999;
+}
+.home-button a {
+  color: #a8d5ba;
+  font-weight: bold;
+  text-decoration: none;
+}
+.home-button:hover {
+  background-color: #c65d1e;
+  transform: scale(1.05);
+}
+.nav-brand {
+  position: fixed;
+  left: 0;
+  z-index: 600;
+  padding: 10px;
+  width: 6%;
+  pointer-events: auto;
+}
+.nav-brand img {
+  width: 100%;
 }
