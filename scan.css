@@ -75,3 +75,43 @@ button {
   padding: 2rem;
   border-radius: 5px;
 }
+
+/* Additional styling for detailed detection info */
+#label-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#label-container .detected-label {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+#label-container .item-text {
+  font-size: 1.15rem;
+  margin-top: 0.3rem;
+}
+
+#label-container .recyclable {
+  font-size: 1.61rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+#label-container .recyclable.yes {
+  color: #0a8a2f;
+}
+
+#label-container .recyclable.no {
+  color: #2a2a2a;
+}
+
+#label-container .dispose {
+  font-size: 1.15rem;
+  margin-top: 0.6rem;
+  max-width: 100%;
+  color: #1f3d2b;
+}

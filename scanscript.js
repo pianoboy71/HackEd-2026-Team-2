@@ -1,6 +1,7 @@
  const URL = "./my_model/";
 
 let model, webcam, labelContainer, maxPredictions;
+let materialsMap = {};
 
 // Load the image model and setup the webcam
     async function init() {
@@ -16,6 +17,16 @@ let model, webcam, labelContainer, maxPredictions;
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
+        // load materials mapping
+        try {
+            const resp = await fetch("materials.json");
+            if (resp.ok) {
+                materialsMap = await resp.json();
+            }
+        } catch (e) {
+            console.warn("Could not load materials.json", e);
+        }
+
         // Convenience function to setup a webcam
         const flip = false; // whether to flip the webcam
         webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
@@ -26,9 +37,6 @@ let model, webcam, labelContainer, maxPredictions;
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
-        for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div"));
-        }
     }
 
     async function loop() {
@@ -74,7 +82,19 @@ let model, webcam, labelContainer, maxPredictions;
             }
         }
 
-        labelContainer.innerHTML = best.className;
+        // Build UI using materials info
+        const name = best.className;
+        const info = materialsMap[name];
+
+        const recyclableText = info ? (info.recyclable ? 'Recyclable' : 'Non-Recyclable') : 'Unknown';
+        const disposeText = info ? info.dispose : '';
+
+        labelContainer.innerHTML = `
+            <div class="detected-label">${name}</div>
+            <div class="item-text">This item is:</div>
+            <div class="recyclable ${info && info.recyclable ? 'yes' : 'no'}">${recyclableText}</div>
+            <div class="dispose">${disposeText}</div>
+        `;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
