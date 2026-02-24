@@ -7,6 +7,8 @@ let model, webcam, labelContainer, maxPredictions;
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
+        document.getElementById("webcam-container").innerHTML = "";
+
         // load the model and metadata
         // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
         // or files from your local hard drive
@@ -35,13 +37,22 @@ let model, webcam, labelContainer, maxPredictions;
         window.requestAnimationFrame(loop);
     }
 
+    function pause() {
+        webcam.pause()
+    }
+
+
     // run the webcam image through the image model
     async function predict() {
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
-        for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-            labelContainer.childNodes[i].innerHTML = classPrediction;
+
+        let best = prediction[0];
+        for (let i = 0; i < prediction.length; i++) {
+            if (prediction[i].probability > best.probability) {
+                best = prediction[i];
+            }
         }
+
+        labelContainer.innerHTML = best.className;
     }
