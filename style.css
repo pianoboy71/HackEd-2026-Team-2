@@ -44,16 +44,47 @@ p {
   z-index: 1;
 }
 
-.about-section-text-wrapper {
-  margin-left: 1rem;
-}
-
 .about-text {
   background-color: #cdf2dc56;
   padding: 2rem;
   border-radius: 10px;
   border-color: #468847;
   border-style: solid;
+  text-align: left !important;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
+}
+
+.faq-section {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border: 1px solid #468847;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 1rem;
+  background-color: #cdf2dc56;
+}
+
+.faq-item summary {
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none; /* removes default arrow in some browsers */
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none; /* removes default arrow in Chrome/Safari */
+}
+
+.faq-item[open] summary {
+  color: #468847;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  margin: 0;
   text-align: left;
 }
 
