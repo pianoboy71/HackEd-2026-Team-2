@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bin Buddy</title>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
@@ -30,11 +30,12 @@
     <div class="nav-header">
         <div class="nav-brand">
             <!-- LOGO -->
-            <img src="./images/logo2.png" alt="logo">
+            <a href="#home" id="homeBtn"><img src="./images/logo2.png" alt="logo"></a>
         </div>
         <i class="fa fa-bars fa-3x"></i>
         <div class="header-links">
             <ul>
+                <li><a href="icons.html">ICONS</a></li>
                 <li><a id="aboutBtn" href="#about">ABOUT</a></li>
                 <li><a id="demoBtn" href="#demovid">DEMO VIDEO</a></li>
                 <li><a id="contactBtn" href="#contact">CONTACT</a></li>
@@ -46,15 +47,17 @@
     <!-- sidebar slider -->
     <div class="nav-screen">
         <i class="fa fa-times fa-3x"></i>
+
         <div class="nav-container">
-            <div class="nav-links">
-                <ul id='myMenu'>
-                    <li data-menuanchor="about"><a href="#about">ABOUT</a></li>
-                    <li data-menuanchor="demovid"><a href="#demovid">DEMO VIDEO</a></li>
-                    <li data-menuanchor="contact"><a href="#contact">CONTACT</a></li>
-                </ul>
+                <div class="nav-links">
+                    <ul id='myMenu'>
+                        <li data-menuanchor="home"><a href="#home">HOME</a></li>
+                        <li data-menuanchor="about"><a href="#about">ABOUT</a></li>
+                        <li data-menuanchor="demovid"><a href="#demovid">DEMO VIDEO</a></li>
+                        <li data-menuanchor="contact"><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
     </div>
     <!-- end navbar slider -->
 
@@ -64,33 +67,36 @@
 
         <!-- begin section -->
 
-         <div class="section aboutme" data-anchor="home">
-        
-        <div class="opaque-bg animated fadeInDown">
-            <h1 style="color:white">
-                BIN<span style="color: #a8d5ba;">/</span>BUDDY
-            </h1>
-            <p>
-                <span id="holder"></span>
-                <span class="blinking-cursor">|</span>
-            </p>
+        <div class="section aboutme" data-anchor="home">
+
+            <div class="opaque-bg animated fadeInDown">
+                <h1 style="color:white">
+                    BIN<span style="color: #a8d5ba;">/</span>BUDDY
+                </h1>
+                <p>
+                    <span id="holder"></span>
+                    <span class="blinking-cursor">|</span>
+                </p>
+            </div>
+            <br></br>
+            <div class="bin-button-wrapper">
+                <a href="scan.html" class="bin-link">
+                    <span class="trash">
+                        <span class="lid"></span>
+                        <i class="bar"></i>
+                    </span>
+                </a>
+                <p class="bin-text">Click Bin to Start Scanning</p>
+            </div>
+
+            <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
         </div>
+    <!-- end section -->
 
-        <div>
-            <button id="start-scan-button">
-                <a href="scan.html">CLICK HERE TO START</a>
-            </button>
-        </div>
+    <!-- begin section -->
 
-        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
-    </div>
-</div>
-        <!-- end section -->
-
-        <!-- begin section -->
-
-        <div class="section" data-anchor="about">
-            <div id="aboutsection">
+    <div class="section" data-anchor="about">
+        <div id="aboutsection">
             <div class="content">
                 <br></br><br></br>
                 <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT</h1>
@@ -114,7 +120,7 @@
     </div>
                 <!-- end section -->
 
-            <!-- begin section -->
+    <!-- begin section -->
 
             <div class="section" data-anchor="demovid">
                 <h1 class="wow fadeInDown" data-wow-delay="0.2s">DEMO VIDEO</h1>
@@ -206,9 +212,33 @@
                         </form>
                         <br>
                     </div>
-                </div>
+
+                    <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL"
+                            data-error="Field can't be blank!" required>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+                        <textarea data-minlength="10" class="form-control" id="message" name="message"
+                            placeholder="MESSAGE" data-error="Minimum of 10 characters" required></textarea>
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="hidden">
+                        <input type="text" class="form-control" id="human" name="human" placeholder="">
+                    </div>
+                    <div class="wow fadeInUp" data-wow-delay="1s">
+                        <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+                    </div>
+                </form>
+                <br>
             </div>
-            <!-- end section -->
+        </div>
+    </div>
+    <!-- end section -->
 
 </body>
 
