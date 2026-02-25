@@ -27,11 +27,22 @@ p {
   height: 100%;
   background-image:
     linear-gradient(rgba(132, 167, 115, 0.85), rgba(132, 167, 115, 0.85)),
-    url("./images/bottles.png");
+    url('./images/bottles.png');
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.about-text {
+  background-color: #cdf2dc56;
+  padding: 2rem;
+  border-radius: 10px;
+  border-color: #468847;
+  border-style: solid;
+  text-align: left !important;
+  line-height: 1.6;
+  margin-bottom: 3.5rem;
 }
 
 .section {
@@ -52,17 +63,23 @@ p {
 
 .section.aboutme {
   background-image:
-    linear-gradient(rgba(31, 61, 43, 0.75), rgba(31, 61, 43, 0.75)),
-    url("./images/rubbish.png"), url("./images/norwich.png");
+    linear-gradient(rgba(31, 61, 43, 0.7), rgba(31, 61, 43, 0.7)),
+    url('./images/rubbish.png'),
+    url('./images/norwich.png');
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* background-blend-mode: normal, overlay; */
 }
+
+
+
 
 #fullpage {
   position: relative;
 }
+
 
 /* flash alert styles */
 
@@ -116,7 +133,18 @@ p {
   z-index: 600;
   padding: 10px;
   width: 6%;
-  pointer-events: auto;
+}
+
+.demo-vid-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#vid{
+  margin: 10px;
+  justify-content: center;
+  width: 17%
 }
 
 .nav-brand img {
@@ -168,7 +196,7 @@ p {
 }
 
 .trash .lid::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 27px;
   height: 7px;
@@ -193,7 +221,7 @@ p {
 
 .trash .bar::after,
 .trash .bar::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 5px;
   height: 50px;
@@ -249,7 +277,6 @@ p {
   position: fixed;
   width: 100%;
   z-index: 500;
-  pointer-events: auto;
 }
 
 .header-links li {
@@ -263,8 +290,8 @@ p {
   color: #a8d5ba !important;
   font-weight: bold;
   -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
 }
+
 
 .header-links a:hover {
   color: #c65d1e;
@@ -298,6 +325,8 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
+
 
 .nav-links a:hover {
   color: #ff6363;
@@ -365,12 +394,12 @@ p {
   position: absolute;
   opacity: 1;
   -webkit-transition: 1.2s ease;
-  transition: 1.2s ease;
 }
 
 /* Scroll down indicator (bouncing) */
 
 @-webkit-keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -392,6 +421,7 @@ p {
 }
 
 @-moz-keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -410,6 +440,7 @@ p {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -574,6 +605,7 @@ p {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
@@ -719,7 +751,7 @@ label {
   z-index: 1000;
 }
 
-.spinner > div {
+.spinner>div {
   background-color: #ff6363;
   height: 100%;
   width: 6px;
@@ -750,6 +782,7 @@ label {
 }
 
 @-webkit-keyframes sk-stretchdelay {
+
   0%,
   40%,
   100% {
@@ -762,6 +795,7 @@ label {
 }
 
 @keyframes sk-stretchdelay {
+
   0%,
   40%,
   100% {
@@ -788,6 +822,7 @@ label {
 }
 
 @keyframes blink {
+
   from,
   to {
     color: transparent;
@@ -799,6 +834,7 @@ label {
 }
 
 @-moz-keyframes blink {
+
   from,
   to {
     color: transparent;
@@ -810,6 +846,7 @@ label {
 }
 
 @-webkit-keyframes blink {
+
   from,
   to {
     color: transparent;
@@ -821,6 +858,7 @@ label {
 }
 
 @-ms-keyframes blink {
+
   from,
   to {
     color: transparent;
@@ -832,6 +870,7 @@ label {
 }
 
 @-o-keyframes blink {
+
   from,
   to {
     color: transparent;
@@ -903,6 +942,7 @@ label {
   border-radius: 10px;
   padding: 0.9rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
   gap: 2rem;
   display: flex;
   flex-direction: column;
@@ -915,7 +955,7 @@ label {
 }
 
 .scan-page-container:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); */
 }
 
 #capture-image,
